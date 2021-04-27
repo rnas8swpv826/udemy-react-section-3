@@ -24,10 +24,14 @@ function App() {
     },
   ];
 
+function addExpenseHandler(expense) {
+  console.log("In App.jsx");
+  console.log(expense);
+}
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
